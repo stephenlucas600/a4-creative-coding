@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .collapsible {
+        position: fixed;
+        left: 0;
+/*         bottom: 0; */
+        background-color: green;
+        text-align: center;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        
+      }
+
+      .active,
+      .collapsible:hover {
+        background-color: #555;
+      }
+
+      .content {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        background-color: #f1f1f1;
+      }
+    </style>
+    <!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js" type="moduel"> </<script> -->
+
+    <script src="script.js" type="module"></script>
+  </head>
+  <body>
+    <button class="collapsible">Help</button>
+    <div class="content">
+      <p>
+        On top, the XYZ menue controls the width of the Torus Knot on the x,y,
+        and z axis.
+      </p>
+      <p>
+        The other menue changes how much more the Torus Knot rotates on the x,y,
+        and z axis each frame.
+      </p>
+    </div>
+  </body>
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
+</html>
