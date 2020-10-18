@@ -1,6 +1,6 @@
 
 ## stephenlucas600-a4
-https://glitch.com/~stephenlucas600-a4
+https://glitch.com/~stephenlucas600-a4 (link Fixed)
 
 
 this project is a receration of the Rotating ring dementeration from Tuesaday class and add addtional fetureas. It awile to learn and debug how script used the three.js and dat.gui.js used to create a rotating knot with a gui menue that controls its width on the x,y,and z axis.
